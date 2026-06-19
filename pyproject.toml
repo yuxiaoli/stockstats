@@ -31,11 +31,16 @@ dependencies = [
     "pandas>=0.24.2",
 ]
 
+[project.scripts]
+stockstats-cli = "cli.main:main"
+
 [project.urls]
 Homepage = "https://github.com/jealous/stockstats"
 
 [tool.setuptools]
-py-modules = ["stockstats"]
+package-dir = {"" = "src"}
+packages = ["cli"]
+py-modules = ["stockstats", "polygon_source"]
 
 [tool.setuptools_scm]
 version_scheme = "guess-next-dev"
