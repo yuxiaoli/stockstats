@@ -39,6 +39,26 @@ Requires Python 3.9+. CI tests against Python 3.10, 3.11, 3.12, and 3.13.
 
 ## Quick Start
 
+### CLI Client
+
+We now provide a comprehensive, interactive command-line interface via `stockstats-cli` using `cmd2` and `rich`.
+
+```bash
+# Start the interactive prompt
+stockstats-cli
+
+# Inside the prompt:
+# Fetch Polygon data automatically
+stockstats> fetch AAPL --from-date 2023-01-01
+
+# Calculate any indicator
+stockstats> calc macd
+stockstats> calc close_20_sma
+
+# List available indicators
+stockstats> list
+```
+
 ### Load and wrap data
 
 `StockDataFrame` works as a wrapper for `pandas.DataFrame`. Initialize it
